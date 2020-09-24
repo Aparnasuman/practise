@@ -8,105 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
   <title>Form </title>
-  <style>
-      *{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-:root{
-    --active-color: #fff;
-    --active-bg-color: #0a0a0a;
-}
-.container {
-    height: 100vh;
-width:100%;
-    background-image: url('./assets/photo-1494548162494-384bba4ab999.jpg');
-   background-repeat: round;
-    position: relative;
-    opacity: 1;
-    -webkit-filter: blur(0);
-    filter: blur(0);
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-  
-  .container .container-overlay {
-  background:#0a0a0a;
-  position: absolute;
-  height: 99%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0.9;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  -moz-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
-}
-.form{
-    position: fixed;
-    top: 40%;
-    left: 39%;
-}
-.img{
-    width: 100px;
-    /* background-color: transparent; */
-    /* margin-left: 107px; */
-    /* top: 20%; */
-    color: #fff;
-    position: absolute;
-    top: -77%;
-    left: 32%;
-    height: 100px;
-}
-.fm-2{
-width: 250px;
-    height: 38px;
-    background-color: #423a3a;
-    border: 1px solid #423a3a;
-    /* background-color: #d45e5e00; */
-    border-radius: 51px;
-    margin: 5px 20px;
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
 
-}
-input::placeholder{
-    padding: 20px;
-
-}
-.submit{
-    text-align: center;
-    color: #ffff;
-    width: 247px;
-    margin: 5px 19px;
-    border: 1px solid #d23434;
-    height: 38px;
-    background-color: #d23434;
-    border-radius: 50px;
-
-}
-input:focus {
-    outline: none !important;
-    padding: 0px 10px;
-    color: white;
-}
-  
-  </style>
 </head>
 <body>
+ 
 <div class="container">
     <div class="container-overlay"></div>
         <div class="form">
             <image src="./assets/copyright.png" width="60px" height="60px" class="img"/>
         <form class="main-form">
-         <input type="text" class="username fm-2" placeholder="&#xF007; username" style="font-family:Arial, FontAwesome"  ><br>
-            <input type="text" class="password fm-2" placeholder="&#xf13e; paassord" style="font-family:Arial, FontAwesome" ><br>
-            <button type="button"  class="submit">Sign in</button>
+         <input type="text"  name="id" class="username fm-2" value="name" placeholder="&#xF007; username" style="font-family:Arial, FontAwesome"  ><br>
+            <input type="text" nam="pass"class="password fm-2" value="pass" placeholder="&#xf13e; paassord" style="font-family:Arial, FontAwesome" ><br>
+            <button type="button"  class="submit" id="intro" onmouseover="myOverFunction()"   onmouseout="mousout()">Sign in</button>
         </form>
 </div>
 
 </div>
+<script>
+
+ function myOverFunction() {
+   document.getElementById("intro").innerHTML = "Log In";
+ }
+ function mousout()
+ {
+    document.getElementById("intro").innerHTML = "Sign In";
+ }
+ </script>
+
+</script>
 </body>
 </html>

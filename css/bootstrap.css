@@ -1,0 +1,21 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --active-color: #fff;
+    --active-bg-color: #0a0a0a;
+}
+.container-fluid {
+    height: 100vh;
+    background-image: url('../assets/photo-1494548162494-384bba4ab999.jpg');
+   background-repeat: round;
+    position: relative;
+    opacity: 1;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
