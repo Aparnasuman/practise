@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>Form </title>
+  <style>
+      *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --active-color: #fff;
+    --active-bg-color: #0a0a0a;
+}
+.container {
+    height: 100vh;
+width:100%;
+    background-image: url('./assets/photo-1494548162494-384bba4ab999.jpg');
+   background-repeat: round;
+    position: relative;
+    opacity: 1;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .container .container-overlay {
+  background:#0a0a0a;
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.9;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+.form{
+    position: fixed;
+    top: 40%;
+    left: 39%;
+}
+.img{
+    margin-left: 40px;
+}
+  
+  </style>
+</head>
+<body>
+<div class="container">
+    <div class="container-overlay"></div>
+        <div class="form">
+            <image src="./assets/D.jpg" width="60px" height="60px" class="img"/>
+        <form class="main-form">
+         <input type="text" class="username" placeholder="username"><br>
+            <input type="text" class="password" placeholder="password"><br>
+            <button type="button" placeholder="Log in"></button>
+        </form>
+    
+</div>
+
+</div>
+</body>
+</html>
