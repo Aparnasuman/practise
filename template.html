@@ -18,7 +18,9 @@
     --active-color: #fff;
     --active-bg-color: #0a0a0a;
 }
-
+body{
+    background-color: #eef1d8;
+}
 .nav-box{
     width: 100%;
     height: 50px;
@@ -44,7 +46,7 @@
 .nv-1{
     width: 25px;
     padding: 20px;
-    padding: 13px 78px;
+    padding: 13px 49px;
     font-size: 20px;
     color: #ffff;
 }
@@ -72,8 +74,41 @@
 input::placeholder{
 color:#c7c7c7;
 }
-
-
+.nav-3{
+    float:right;
+}
+.as{
+    position: absolute;
+    top:16px;
+    right: 50px;
+}
+.main-container{
+    position: relative;
+}
+.container{
+    margin: 10px 50px;
+}
+#main {
+  width: 300px;
+  height: 300px;
+  display: flex;
+}
+#main div {
+    background-color: #ffff;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 900px;
+}
+.btn{
+    margin-bottom: 16px;
+    background-color: yellow;
+    border: 1px solid yellow;
+    padding: 3px;
+}
+#main div:nth-of-type(2) {
+    margin: 0px 13px;
+    flex-basis: 350px;
+}
 </style>
 
 <body>
@@ -99,10 +134,29 @@ color:#c7c7c7;
                 </datalist>
             </div>
             <div class="nav-3">
-             <h5>Hello,Andrey</h4>
+                <div class="as">
+             Hello,Aparna <i class="fas fa-angle-down " style="color: yellow; top:2px"></i>
+            </div>
             </div>
         </div>
     </nav>
+    <header class="main-container">
+      <div class="container">
+       <button class="btn">PROFILE</button> 
+       <span class="nm-3" style="margin-left: 2px;">NETWORK</span>
+       <div id="main">
+        <div class="ms-2">
+            <div class="img">
+                <image src="./assets/profile.png" width="200px"  height="265px" class="img-sc"/>
+                <div class="profile">Aparna Suman</div></image>
+            </div>
+            <div class="dtl-1">
+                
+            </div>
+        </div>
+        <div class="ms-d"></div>  
+      </div>
+    </header>
 
 </body>
 </html>
