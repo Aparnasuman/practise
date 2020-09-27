@@ -1,0 +1,51 @@
+<html>
+<head>
+    <style>
+      #imgGallary{
+          width: 350px;
+          height: 60px;
+          border: 1px solid black;
+          position: relative;
+          transition-duration: 0.7s;
+          clear: left;
+ }
+ .img-sc{
+    width: 52px;
+    height: 50px;
+    margin-top: 4px;
+    margin-left: 3px;
+    animation-name: fade;
+    animation-duration: 1.5s;
+
+    animation-timing-function: ease-in-out;
+ }
+ @keyframes fade {
+    from {
+      transform: translateX(0);
+   }
+   to {
+      transform: translateX(-1000px);
+   }
+ }
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="imgGallary" class="container">
+    <img src="./assets/profile.png"  class="img-sc"/>
+    <img src="./assets/D.jpg" class="img-sc"/>
+     <img src="./assets/copyright.png" class="img-sc"/>
+    <img src="./assets/copyright.png" class="img-sc"/>
+    <img src="./assets/profile.png"  class="img-sc"/>
+     <img src="./assets/D.jpg"  class="img-sc"/>
+</div>
+
+<script>
+    
+
+</script>
+</body>
+</html>
