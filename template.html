@@ -2,6 +2,7 @@
 <html>
 <head>
     <script src="https://kit.fontawesome.com/683a2f296f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
@@ -248,7 +249,9 @@ ul{
 .footer-distributed .footer-center{
 	width: 35%;
 }
-
+.main-skills>.li{
+    margin-top: 30px;
+}
 .footer-distributed .footer-center i{
 	background-color:  #33383b;
 	color: #ffffff;
@@ -295,6 +298,9 @@ ul{
   color: #fff;
   display: inline-block;
   padding-right: 5px;
+}
+.manskills>li{
+    margin-top: 10px;
 }
 
 .footer-distributed .footer-links .link-1:before {
@@ -352,7 +358,7 @@ h3{
 
 /* If you don't want the footer to be responsive, remove these media queries */
 .du>h4,h3{
-   margin-left: 20px;
+   margin-left: 30px;
     font-weight: 500;
 }
 @media (max-width: 880px) {
@@ -507,42 +513,7 @@ h3{
               <div class="Bio">
                 <span class="detail">
                     <p class="bio">Activities</p>
-                    <div class="commnt" style="display: flex;">
-                    <span class="imagf"><image src="./assets/profile.png" width="50px"  height="56px" class="img-sc"/>
-                    </span> 
-                  <span class="nam">
-                         <p>Aparna suman</p>
-                     <p>I am working on HTML CSS BOOTSTRAP ANGULAR AND JQURY on profile handling project</p>
-                 </span>
-                </div>
-                <div class="commnt" style="display: flex; margin: 0px !important;">
-                   <span class="imagf"><image src="./assets/profile.png" width="50px"  height="56px" class="img-sc"/>
-                   </span> 
-                 <span class="nam">
-                        <p>Aparna suman</p>
-                    <p>I am working on reactjs profile handling project</p>
-                </span>
-            </div>
-            <div class="du">
-           <h3> GURU NANAK DEV ENGINEERING COLLAGE</h3>
-           <h4> BACHALOR OF COMPUTER SCIENCE </h4>
-             <h4>Computer Science - Web Development / CGPA: 7.91</h4>
-                       
-
-          <h4 >August 2016 - May 2019</h4>
-           <h3>SANT LONGOWAL INSTITUTE OF ENGINEERING & TECHNOLOGY</h3>
-                  <h4>DIPLOMA IN COMPUTER APPLICATION</h4>
-             <h4>Computer Science - Computer Application / PERCENTAGE: 81%/100%</h4>
-              
-
-            <h4>August 20012 - May 2016</h4>
-        <h3>JESUS AND MARRY ACADEMY</h3>
-       <h4>TENTH</h4>
-              <h4>Major- Physics Chemistry Math / CGPA: 9.0</h4>
-                
-</div>
-        </span>
-              </div>
+                    <div id="piechart"></div>
                </div>
           <div class="ms-2" style="    height: 280px;
           margin-top: -81px;
@@ -564,11 +535,19 @@ h3{
               <div class="ms-1">
                   <div class="Bio">
                       <span class="detail">
-                        <div class="bio" style="width:150px">Org chart</div>
-      
-                       <p class="intro-1">I am a Front End developer with industry experience building websites and web applications. I specialize in JavaScript and have professional experience working with ReactJS and Angular. I also have experience working with PHP, HTML, CSS and Javascript. Take a look at my work or get in touch!
-                       </p>
-                       <p class="intro-1"> Working with AngularJs,ReactJS and other tools to make beautiful,elegant and responsive website</p>
+                        <div class="bio" style="width:150px">EDUCATION</div>
+                        <div class="du">
+                            <h3> GURU NANAK DEV ENGINEERING COLLAGE</h3>
+                            <h4> BACHALOR OF COMPUTER SCIENCE/August 2016 - May 2019 </h4>
+                              <h4>Computer Science - Web Development / CGPA: 7.91</h4>
+                                        <h3>SANT LONGOWAL INSTITUTE OF ENGINEERING & TECHNOLOGY</h3>
+                                   <h4>DIPLOMA IN COMPUTER APPLICATION / August 20012 - May 2016</h4>
+                              <h4>Computer Science - Computer Application / PERCENTAGE: 81%/100%</h4>
+                              <h3>JESUS AND MARRY ACADEMY</h3>
+                        <h4>TENTH / Major- Physics Chemistry Math / CGPA: 9.0</h4>
+
+                                 
+                 </div>
                   </div>
                  
                  
@@ -577,8 +556,8 @@ h3{
               <div class="ms-2" style="    margin-top: -300px; height: 500px;
           "> 
           <div class="bio" style="width:150px;margin:0px;">Skills</div>
-          <ul class=" li"style="margin-left:10px;">
-            <li class="li"><i class="fab fa-html5"></i>HTML-5</li>
+          <ul class=" li main-skills"style="margin-left:10px;">
+            <li class="li "><i class="fab fa-html5"></i>HTML-5</li>
             <li class="li"><i class="fab fa-css3"></i>CSS-3</li>
             <li class="li"> <i class="fab fa-bootstrap"></i>BOOTSTRAP 4</li>
             <li class="li"><i class="fab fa-angular"></i>ANGULAR 8</li>
@@ -675,8 +654,28 @@ var click = true;
     img1.style.display = "none"; 
     console.log(click);
   }
- 
  }
+ google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['HTML', 8],
+  ['JAVASCRIPT', 6],
+  ['REACT', 5],
+  ['BOOTSTRAP', 7],
+  ['ANGULAR', 4 ]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Experince rate', 'width':650, 'height':450};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
     </script>
 </body>
 </html>
