@@ -301,6 +301,12 @@ ul{
   content: none;
 }
 
+h3{
+    font-size: 19px;
+    font-weight: 500;
+    color: lightseagreen;
+    margin-top: 2px;
+}
 /* Footer Right */
 
 .footer-distributed .footer-right{
@@ -345,7 +351,10 @@ ul{
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
-
+.du>h4,h3{
+   margin-left: 20px;
+    font-weight: 500;
+}
 @media (max-width: 880px) {
 
 	.footer-distributed{
@@ -471,15 +480,22 @@ ul{
              
         </div>
         <div class="ms-2" style="height: 221px;">
-          <div class="block">
+          <div class="block" style="margin-top: 20px;">
             <div class="bio" style="width:150px">In Common</div>
-            <div class="image-slider"    style="margin-top: 11px;">
-                <image src="./assets/D.jpg" style="height: 100px; width: 100px;"></image>
-                <image src="./assets/copyright.png" style="height: 100px; width: 100px;"></image>
-                <image src="./assets/profile.png" style="height: 100px; width: 100px;"></image>
+            <div id="image-slider"style="margin-top: 11px;">
+                <image src="./assets/0.png" id="img-1"style="height: 100px; width: 100px;"></image>
+                <image src="./assets/download.png"  id="img-1" style="height: 100px; width: 100px;"></image>
+                <image src="./assets/downloada.png"  id="img-1" style="height: 100px; width: 100px;"></image>
+            </div>
+            <div id="image-slider-m"style="margin-top: 11px;  margin-left:10px;display:none">
+                <image src="./assets/0.png" id="img-1"style="height: 100px; width: 56px;"></image>
+                <image src="./assets/download.png"  id="img-1" style="height:100px; width: 56px;"></image>
+                <image src="./assets/downloada.png"  id="img-1" style="height: 100px; width: 56px;"></image>
+                <image src="./assets/downloadb.jpg"  id="img-1" style="height: 100px; width: 56px;"></image>
+                <image src="./assets/downloadc.jpg"  id="img-1" style="height: 100px; width: 56px;"></image>
             </div>
             <div class="button">
-              <button class="button-sm">VIEW ALL <i class="fas fa-chevron-right"></i></button>
+              <button class="button-sm" onclick="myMove()">VIEW ALL <i class="fas fa-chevron-right"></i></button>
             </div>
           </div>
         </div>
@@ -507,12 +523,38 @@ ul{
                     <p>I am working on reactjs profile handling project</p>
                 </span>
             </div>
+            <div class="du">
+           <h3> GURU NANAK DEV ENGINEERING COLLAGE</h3>
+           <h4> BACHALOR OF COMPUTER SCIENCE </h4>
+             <h4>Computer Science - Web Development / CGPA: 7.91</h4>
+                       
+
+          <h4 >August 2016 - May 2019</h4>
+           <h3>SANT LONGOWAL INSTITUTE OF ENGINEERING & TECHNOLOGY</h3>
+                  <h4>DIPLOMA IN COMPUTER APPLICATION</h4>
+             <h4>Computer Science - Computer Application / PERCENTAGE: 81%/100%</h4>
+              
+
+            <h4>August 20012 - May 2016</h4>
+        <h3>JESUS AND MARRY ACADEMY</h3>
+       <h4>TENTH</h4>
+              <h4>Major- Physics Chemistry Math / CGPA: 9.0</h4>
+                
+</div>
         </span>
               </div>
                </div>
           <div class="ms-2" style="    height: 280px;
           margin-top: -81px;
       ">
+       <p class="bio" style="margin-top: 0px !important;" >Interest</p>
+       <p class="intro-1" style="margin-top: 0px !important;">
+        Apart from being a web developer, I enjoy most of the time to developed new idea in front end animation with refrence from google
+
+        When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.
+       </p>
+      
+         
          
           </div>
         </div>
@@ -533,7 +575,18 @@ ul{
                    
               </div>
               <div class="ms-2" style="    margin-top: -300px; height: 500px;
-          ">
+          "> 
+          <div class="bio" style="width:150px;margin:0px;">Skills</div>
+          <ul class=" li"style="margin-left:10px;">
+            <li class="li"><i class="fab fa-html5"></i>HTML-5</li>
+            <li class="li"><i class="fab fa-css3"></i>CSS-3</li>
+            <li class="li"> <i class="fab fa-bootstrap"></i>BOOTSTRAP 4</li>
+            <li class="li"><i class="fab fa-angular"></i>ANGULAR 8</li>
+            <li class="li"><i class="fab fa-react"></i>REACTJS</li>
+            <li class="li"><i class="fab fa-squarespace"></i>SQL</li>
+            <li class="li"><i class="fab fa-js-square"></i>JavaScript</li>
+            <li class="li"><i class="fab fa-js-square"></i>JQURY</li>
+        </ul>
              
               </div>
             </div>
@@ -602,5 +655,28 @@ ul{
         </div>
 
     </footer>
+    <script>
+
+var click = true;
+ function myMove() {
+ 
+   var img0 = document.getElementById("image-slider");
+   var img1=  document.getElementById("image-slider-m")
+  if (click==true) {
+   
+    img0.style.display = "none";
+     img1.style.display = "block";
+     click=!click;
+     console.log(click);
+  }else {
+      
+      click=!click;
+     img0.style.display = "block";
+    img1.style.display = "none"; 
+    console.log(click);
+  }
+ 
+ }
+    </script>
 </body>
 </html>
